@@ -7,6 +7,10 @@ const connect = function () {
   conn.on("data", (data) => {
     console.log("Server says: ", data);
   });
+  conn.on("connect", (connect) => {
+    console.log("connection is successfully established: ", connect);
+  });
+  conn.write("Name: NIM");
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
