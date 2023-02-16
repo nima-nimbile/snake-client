@@ -11,6 +11,18 @@ const connect = function () {
     console.log("connection is successfully established: ", connect);
   });
   conn.write("Name: NIM");
+  setTimeout(() => {
+  //   conn.write("Move: up");
+  }, 500)
+  // setInterval(() => {
+  //   conn.write("Move: left")
+  // }, 1000)
+  // setTimeout(() => {
+  //   conn.write("Move: down");
+  // }, 3000)
+  // setTimeout(() => {
+  //   conn.write("Move: right");
+  // }, 4000)
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
